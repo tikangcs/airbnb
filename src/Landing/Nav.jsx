@@ -17,7 +17,7 @@ export default function Nav() {
       </div>
       <div className="landing__profile">
         <button className="landing__profile--hostbutton">Become a Host</button>
-        <Globe height="16px" width="16px" />
+        <Globe height="16px" width="16px" min-width="100%" />
         <button className="landing__profile--badge">
           <Menu height="16px" width="16px" />
           <div className="landing__profile--userpic">
