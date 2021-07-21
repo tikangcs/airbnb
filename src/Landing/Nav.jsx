@@ -8,7 +8,7 @@ export default function Nav() {
   return (
     <nav className="landing__nav">
       <div className="landing__logo">
-        <Logo height="5vh" width="8vw" />
+        <Logo height="6vh" width="9vw" />
       </div>
       <div className="landing__tabs">
         <div className="landing__tab">Places to stay</div>
@@ -16,11 +16,13 @@ export default function Nav() {
         <div className="landing__tab">Online Experiences</div>
       </div>
       <div className="landing__profile">
-        <button>Become a Host</button>
+        <button className="landing__profile--hostbutton">Become a Host</button>
         <Globe height="16px" width="16px" />
         <button className="landing__profile--badge">
           <Menu height="16px" width="16px" />
-          <User height="16px" width="16px" />
+          <div className="landing__profile--userpic">
+            <User height="16px" width="16px" />
+          </div>
         </button>
       </div>
     </nav>
