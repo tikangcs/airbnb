@@ -15,6 +15,8 @@ import Pet from "./pets-allowed.jpg";
 import Experiences from "./experiences.jpg";
 import OutdoorExp from "./online-experiences.jpg";
 import OutdoorCollect from "./outdoor-collection.jpg";
+import Trophy from "./trophy.gif";
+import QueensCover from "./queens-cover.jpg";
 
 export {
   NY,
@@ -34,4 +36,6 @@ export {
   Experiences,
   OutdoorExp,
   OutdoorCollect,
+  Trophy,
+  QueensCover,
 };

@@ -1,5 +1,6 @@
 import React from "react";
 import { ReactComponent as Loupe } from "../images/loupe.svg";
+import { Link } from "react-router-dom";
 
 export default function Search() {
   return (
@@ -38,7 +39,9 @@ export default function Search() {
           ></input>
         </div>
         <div className="landing__search--loupe">
-          <Loupe height="16px" width="16px" />
+          <Link to="/listings">
+            <Loupe height="16px" width="16px" />
+          </Link>
         </div>
       </div>
     </div>
