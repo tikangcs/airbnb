@@ -6,7 +6,7 @@ import Footer from "../Landing/Footer.jsx";
 import BottomNav from "../Landing/BottomNav";
 import footers from "../Landing/footers.js";
 
-export default function Listing() {
+export default function Listings() {
   return (
     <div className="listings__wrapper">
       <Nav />

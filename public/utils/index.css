@@ -33,6 +33,7 @@ body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
+  overscroll-behavior-y: none;
 }
 
 a:not([class]) {
@@ -646,14 +647,17 @@ select {
 }
 
 .listings__nav {
-  border: 2px solid black;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 97%;
+  margin: 1% 0;
 }
 
 .listings__search {
@@ -662,6 +666,7 @@ select {
   display: flex;
   border: 1px solid gray;
   border-radius: 50px;
+  height: 40px;
 }
 
 .listings__search--component {
@@ -740,19 +745,20 @@ select {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  border: 2px solid black;
   width: 97%;
   height: 100vh;
 }
 
 .listings__results--wrapper {
   width: 50%;
-  border: 2px solid black;
-  overflow: scroll;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  overscroll-behavior: auto;
 }
 
 .listings__results--header {
   height: 27%;
+  padding: 5% 0 0 0;
 }
 
 .listings__results--title {
@@ -799,6 +805,7 @@ select {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 5% 0;
 }
 
 .listings__results--pagination {
@@ -813,23 +820,40 @@ select {
 }
 
 .listings__recent--wrapper {
-  margin: 5% 0;
   padding: 5% 0;
-  background-color: lightgray;
+  background-color: #f6f6f6;
 }
 
 .listings__recent--sectionhead {
   font-size: 1.3rem;
+  font-weight: 500;
 }
 
 .listings__recent--sectionsubhead {
   font-size: 1rem;
+  margin-bottom: 3%;
 }
 
 .listings__recentcards--wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.listings__recentcards--container {
+  margin: 0 3% 0 0;
+}
+
+.listings__recentcards--image {
+  border-radius: 20px;
+  margin: 2% 0;
+}
+
+.listings__recentcards--rating {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 2% 0;
 }
 
 .listings__locations--wrapper {
@@ -854,6 +878,9 @@ select {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .listings__locationbtn--location {
@@ -915,13 +942,13 @@ select {
 
 .listings__map--wrapper {
   width: 50%;
-  border: 2px solid black;
 }
 
 .listings__map {
-  width: 45%;
-  height: 55%;
-  position: fixed;
+  width: 100%;
+  height: 100%;
+  position: -webkit-sticky;
+  position: sticky;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;

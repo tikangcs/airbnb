@@ -17,6 +17,8 @@ import OutdoorExp from "./online-experiences.jpg";
 import OutdoorCollect from "./outdoor-collection.jpg";
 import Trophy from "./trophy.gif";
 import QueensCover from "./queens-cover.jpg";
+import Recent1 from "./recent1.jpg";
+import Recent2 from "./recent2.jpg";
 
 export {
   NY,
@@ -38,4 +40,6 @@ export {
   OutdoorCollect,
   Trophy,
   QueensCover,
+  Recent1,
+  Recent2,
 };
