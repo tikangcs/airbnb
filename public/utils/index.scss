@@ -1,4 +1,4 @@
-@import "variables.scss";
+@import "_variables.scss";
 
 *,
 *::before,
@@ -55,6 +55,10 @@ select {
   border-radius: 10px;
 }
 
+button {
+  cursor: pointer;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html:focus-within {
     scroll-behavior: auto;
@@ -70,13 +74,54 @@ select {
   }
 }
 
-.landing__main--wrapper {
-  background: url("./home.jpeg") no-repeat fixed 50% 50%;
-  background-size: cover;
-  font-size: 1.3rem;
+@mixin search-defaults {
+  border: none;
+  background: white;
+  border-radius: 0;
+  height: 8vh;
+  min-height: 50px;
+  max-height: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2%;
+}
+
+@mixin checkinout-defaults {
+  border-left: 2px solid $accentColor;
+  min-width: 160px;
+}
+
+@mixin bannerButton-defaults {
+  padding: 8px 18px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin: 8% 0 0 0;
+  background-color: white;
+}
+
+@mixin flexColAlignCenter {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+@mixin bannerImage-defaults {
+  border-radius: 20px;
+  height: 400px;
+  width: 100%;
+  min-width: 1300px;
+  object-fit: cover;
+  object-position: 50% 75%;
+  vertical-align: bottom;
+  z-index: 0;
+}
+
+.landing__main--wrapper {
+  @include flexColAlignCenter;
+  background: url("./home.jpeg") no-repeat fixed 50% 100%;
+  background-size: cover;
+  font-size: 1.3rem;
   height: 80vh;
 }
 
@@ -89,27 +134,36 @@ select {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 2% 0;
+  width: 100%;
+  min-width: 1000px;
+  margin: 1% 0;
 }
 
 .landing__logo {
   font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
 }
 
 .landing__tabs {
-  width: 30%;
+  width: 40%;
+  min-width: 400px;
+  max-width: 500px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
 }
 
 .landing__tab {
   min-width: 170px;
-  font-size: 1.1rem;
-  font-weight: 300;
+  font-size: 0.9rem;
+  font-weight: 400;
+  cursor: pointer;
 }
 
 .landing__profile {
-  width: 20%;
+  width: 300px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -118,9 +172,9 @@ select {
 }
 .landing__profile--hostbutton {
   background: none;
+  font-size: 0.9rem;
   color: white;
   border: none;
-  font-size: 1rem;
   min-width: 135px;
 }
 
@@ -138,13 +192,11 @@ select {
 .landing__profile--userpic {
   background-color: $primaryColor;
   width: 32px;
-  height: 32px;
+  aspect-ratio: 1/1;
   border-radius: 50%;
   vertical-align: middle;
-  display: flex;
-  flex-direction: column;
+  @include flexColAlignCenter;
   justify-content: center;
-  align-items: center;
 }
 
 .landing__search {
@@ -162,6 +214,7 @@ select {
 
 .landing__search--input {
   height: 3vh;
+  width: 150px;
   font-size: 0.8rem;
   border: none;
 }
@@ -174,71 +227,29 @@ select {
 }
 
 .landing__search--location {
-  border: none;
-  background: white;
-  border-radius: 0;
+  @include search-defaults;
   border-top-left-radius: 50px;
   border-bottom-left-radius: 50px;
-  height: 8vh;
-  min-height: 50px;
-  max-height: 60px;
-  width: 12vw;
-  min-width: 165px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 1%;
-  padding-left: 2%;
+  width: 220px;
+  padding-left: 3%;
 }
 
 .landing__search--checkin {
-  border: none;
-  background: white;
-  border-radius: 0;
-  border-left: 2px solid gray;
-  height: 8vh;
-  min-height: 50px;
-  max-height: 60px;
-  width: 8vw;
-  min-width: 100px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 1%;
+  @include search-defaults;
+  @include checkinout-defaults;
 }
 
 .landing__search--checkout {
-  border: none;
-  background: white;
-  border-radius: 0;
-  border-left: 2px solid gray;
-  height: 8vh;
-  min-height: 50px;
-  max-height: 60px;
-  width: 8vw;
-  min-width: 100px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 1%;
+  @include search-defaults;
+  @include checkinout-defaults;
 }
 
 .landing__search--guests {
-  border: none;
-  background: white;
-  border-radius: 0;
-  border-left: 2px solid gray;
+  @include search-defaults;
+  border-left: 2px solid $accentColor;
   border-top-right-radius: 50px;
   border-bottom-right-radius: 50px;
-  height: 8vh;
-  min-height: 50px;
-  max-height: 60px;
-  width: 12vw;
-  min-width: 165px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 1%;
+  width: 220px;
   padding-left: 5%;
   padding-top: 4%;
   padding-bottom: 4%;
@@ -248,16 +259,18 @@ select {
   display: flex;
   align-items: center;
 }
+
 .landing__search--loupe {
-  margin-left: -18%;
+  margin-left: -55px;
   background-color: $primaryColor;
   width: 45px;
-  height: 45px;
+  aspect-ratio: 1/1;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .landing__search--guests::placeholder {
   font-size: 1rem;
 }
@@ -265,7 +278,7 @@ select {
 .landing__headline {
   align-self: flex-start;
   position: absolute;
-  top: 300px;
+  top: 295px;
 }
 
 .landing__headline--text {
@@ -300,7 +313,7 @@ select {
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 1fr);
   grid-column-gap: 20px;
-  grid-row-gap: 20px;
+  grid-row-gap: 25px;
   margin-bottom: 5%;
 }
 
@@ -314,16 +327,18 @@ select {
   display: flex;
   align-items: center;
   min-width: 220px;
+  cursor: pointer;
 }
 
 .landing__explore--photo {
   border-radius: 10%;
-  height: 64px;
-  width: 64px;
+  width: 3.5vw;
+  aspect-ratio: 1/1;
+  min-width: 64px;
 }
 .landing__explore--details {
-  font-size: 1rem;
-  margin: 0 7%;
+  font-size: 1.2vw;
+  margin: 0 5%;
 }
 
 .landing__explore--location {
@@ -342,13 +357,7 @@ select {
 }
 
 .landing__banner--image--forest {
-  border-radius: 20px;
-  height: 400px;
-  width: 100%;
-  object-fit: cover;
-  object-position: 50% 50%;
-  vertical-align: bottom;
-  z-index: 0;
+  @include bannerImage-defaults;
 }
 
 .landing__banner--main--forest {
@@ -365,20 +374,18 @@ select {
 }
 
 .landing__banner--button--forest {
-  padding: 10px 18px;
-  font-weight: 500;
-  margin: 8% 0 0 0;
+  @include bannerButton-defaults;
   color: white;
   background-color: black;
 }
 
 .landing__gallery--container {
   display: flex;
-  margin-bottom: 5%;
+  margin: 1% 0 4% 0;
 }
 
 .landing__gallery--item {
-  margin: 0 0.7%;
+  margin: 0 0.9% 0 0;
 }
 
 .landing__gallery--image {
@@ -391,7 +398,8 @@ select {
   font-weight: 500;
 }
 .landing__gallery--subtext {
-  font-size: 1rem;
+  font-size: 0.88rem;
+  margin: 0.5% 0;
 }
 
 .landing__banner--host {
@@ -400,13 +408,8 @@ select {
 }
 
 .landing__banner--image--host {
-  border-radius: 20px;
-  height: 400px;
-  width: 100%;
-  object-fit: cover;
-  object-position: 50% 50%;
-  vertical-align: bottom;
-  z-index: 0;
+  @include bannerImage-defaults;
+  object-position: 50% 20%;
 }
 
 .landing__banner--main--host {
@@ -418,27 +421,24 @@ select {
 }
 .landing__banner--text--host {
   margin-bottom: 3%;
-  font-size: 2.8rem;
+  font-size: 2.3rem;
   font-weight: 500;
   color: white;
   letter-spacing: 1px;
 }
 
 .landing__banner--sub--host {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   color: white;
 }
 
 .landing__banner--button--host {
-  padding: 10px 18px;
-  font-weight: 500;
-  margin: 8% 0 0 0;
-  background-color: white;
+  @include bannerButton-defaults;
 }
 
 .landing__footer--wrapper {
-  border-top: 2px solid grey;
-  background-color: lightgray;
+  border-top: 2px solid $accentColor;
+  background-color: $secondaryColor;
   display: flex;
   justify-content: space-evenly;
   padding: 5%;
@@ -456,9 +456,9 @@ select {
 }
 
 .landing__bottomNav--wrapper {
-  background-color: lightgray;
+  background-color: $secondaryColor;
   padding: 3% 5%;
-  border-top: 2px solid grey;
+  border-top: 2px solid $accentColor;
   display: flex;
   justify-content: space-between;
   font-size: 0.9rem;
@@ -483,10 +483,8 @@ select {
 }
 
 .listings__wrapper {
+  @include flexColAlignCenter;
   height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .listings__nav {
@@ -539,15 +537,13 @@ select {
 }
 
 .listings__profile--userpic {
+  @include flexColAlignCenter;
   background-color: $primaryColor;
   width: 32px;
-  height: 32px;
+  aspect-ratio: 1/1;
   border-radius: 50%;
   vertical-align: middle;
-  display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: center;
 }
 
 .listings__main {
@@ -595,9 +591,7 @@ select {
 }
 
 .listings__results--nav {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  @include flexColAlignCenter;
   padding: 5% 0;
 }
 .listings__results--pagination {
@@ -718,7 +712,7 @@ select {
 
 .listings__footer--wrapper {
   border-top: 2px solid grey;
-  background-color: lightgray;
+  background-color: $secondaryColor;
   width: 100%;
   display: flex;
   justify-content: space-evenly;

@@ -29,7 +29,7 @@ const galleries = {
     {
       img: OutdoorCollect,
       text: "Outdoor collection",
-      subtext: "Experiences that immerse you in nature",
+      subtext: "Experiences that immerse you in nature.",
     },
   ],
 };

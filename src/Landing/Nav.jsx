@@ -8,7 +8,7 @@ export default function Nav() {
   return (
     <nav className="landing__nav">
       <div className="landing__logo">
-        <Logo height="6vh" width="9vw" />
+        <Logo height="40px" width="120px" />
       </div>
       <div className="landing__tabs">
         <div className="landing__tab">Places to stay</div>
