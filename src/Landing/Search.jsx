@@ -5,10 +5,13 @@ import { Link } from "react-router-dom";
 export default function Search() {
   return (
     <div className="landing__search">
-      <div className="landing__search--location">
-        <div className="landing__search--header">Location</div>
+      <div className="landing__search--location" id="mobile">
+        <div className="landing__search--header" id="mobile">
+          Location
+        </div>
         <input
           className="landing__search--input"
+          id="mobile"
           type="text"
           placeholder="Where are you going?"
         ></input>
@@ -30,7 +33,7 @@ export default function Search() {
         ></input>
       </div>
       <div className="landing__search--guests">
-        <div className="landing__search--header">Guests</div>
+        <div className="landing__search--header">Guests</div>3
         <input
           className="landing__search--input"
           type="text"
