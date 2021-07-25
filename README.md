@@ -1,7 +1,7 @@
 # Airbnb Clone 
 
 ## Objective
-A front end exercise to create a responsive clone of the Airbnb web app. 
+A front end exercise to create a responsive clone of the Airbnb web app.  
 [Link to project](https://tikangcs.github.io/airbnb)
 
 ## Technologies Used
