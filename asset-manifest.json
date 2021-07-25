@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/airbnb/static/js/main.ef0aa70c.chunk.js",
-    "main.js.map": "/airbnb/static/js/main.ef0aa70c.chunk.js.map",
+    "main.js": "/airbnb/static/js/main.ee599cf5.chunk.js",
+    "main.js.map": "/airbnb/static/js/main.ee599cf5.chunk.js.map",
     "runtime-main.js": "/airbnb/static/js/runtime-main.37971a6c.js",
     "runtime-main.js.map": "/airbnb/static/js/runtime-main.37971a6c.js.map",
-    "static/js/2.c25510b6.chunk.js": "/airbnb/static/js/2.c25510b6.chunk.js",
-    "static/js/2.c25510b6.chunk.js.map": "/airbnb/static/js/2.c25510b6.chunk.js.map",
+    "static/js/2.7bfc2a0e.chunk.js": "/airbnb/static/js/2.7bfc2a0e.chunk.js",
+    "static/js/2.7bfc2a0e.chunk.js.map": "/airbnb/static/js/2.7bfc2a0e.chunk.js.map",
     "index.html": "/airbnb/index.html",
-    "static/js/2.c25510b6.chunk.js.LICENSE.txt": "/airbnb/static/js/2.c25510b6.chunk.js.LICENSE.txt",
+    "static/js/2.7bfc2a0e.chunk.js.LICENSE.txt": "/airbnb/static/js/2.7bfc2a0e.chunk.js.LICENSE.txt",
     "static/media/arlington.219a661a.png": "/airbnb/static/media/arlington.219a661a.png",
     "static/media/boston.c98dc812.png": "/airbnb/static/media/boston.c98dc812.png",
     "static/media/dc.ad3edad4.png": "/airbnb/static/media/dc.ad3edad4.png",
@@ -42,7 +42,7 @@
   },
   "entrypoints": [
     "static/js/runtime-main.37971a6c.js",
-    "static/js/2.c25510b6.chunk.js",
-    "static/js/main.ef0aa70c.chunk.js"
+    "static/js/2.7bfc2a0e.chunk.js",
+    "static/js/main.ee599cf5.chunk.js"
   ]
 }
