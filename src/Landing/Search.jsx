@@ -29,18 +29,18 @@ export default function Search() {
           placeholder="Add Dates"
         ></input>
       </div>
+      <div className="landing__search--guests">
+        <div className="landing__search--header">Guests</div>
+        <input
+          className="landing__search--input"
+          type="text"
+          placeholder="Add Guests"
+        ></input>
+      </div>
       <div className="landing__search--tail">
-        <div className="landing__search--guests">
-          <div className="landing__search--header">Guests</div>
-          <input
-            className="landing__search--input"
-            type="text"
-            placeholder="Add Guests"
-          ></input>
-        </div>
         <div className="landing__search--loupe">
           <Link to="/listings">
-            <Loupe height="16px" width="16px" />
+            <Loupe height="20px" width="20px" />
           </Link>
         </div>
       </div>

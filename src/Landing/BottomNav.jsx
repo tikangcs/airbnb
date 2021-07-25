@@ -5,9 +5,11 @@ export default function BottomNav() {
     <div className="landing__bottomNav--wrapper">
       <div className="landing__bottomNav--left">
         <div>© 2021 Airbnb, Inc.</div>
-        <div>Privacy</div>
-        <div>Terms</div>
-        <div>Sitemap</div>
+        <div className="landing__bottomNav--links" id="web">
+          <div>Privacy</div>
+          <div>Terms</div>
+          <div>Sitemap</div>
+        </div>
       </div>
       <div className="landing__bottomNav--right">
         <div>English</div>

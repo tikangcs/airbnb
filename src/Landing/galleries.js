@@ -20,16 +20,19 @@ const galleries = {
       img: Experiences,
       text: "Experiences",
       subtext: "Unique ideas for things to do on your trip.",
+      id: 1,
     },
     {
       img: OutdoorExp,
       text: "Online Experiences",
       subtext: "Live, interactive activities led by Hosts.",
+      id: 2,
     },
     {
       img: OutdoorCollect,
       text: "Outdoor collection",
       subtext: "Experiences that immerse you in nature.",
+      id: 3,
     },
   ],
 };
