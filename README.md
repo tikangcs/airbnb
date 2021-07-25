@@ -1,7 +1,7 @@
 # Airbnb Clone
 
 ## Objective
-The objective of this project is to create a clone of the Airbnb web app. 
+A front end exercise to create a responsive clone of the Airbnb web app. 
 
 ## Technologies Used
 - Javascript
