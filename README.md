@@ -20,6 +20,7 @@ A front end exercise to create a responsive clone of the Airbnb web app.
 - CSS reset 
 
 ## Next Steps
+- Add date pickers and other utilities to the search feature
 - Add image carousels to the listings thumbnails
 - Architect a backend with a web server and database layer
 - Convert to a dynamic web page by serving content such as listings and images
