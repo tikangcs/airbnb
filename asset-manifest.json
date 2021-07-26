@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/airbnb/static/js/main.4ade0d21.chunk.js",
-    "main.js.map": "/airbnb/static/js/main.4ade0d21.chunk.js.map",
+    "main.js": "/airbnb/static/js/main.fbb227a7.chunk.js",
+    "main.js.map": "/airbnb/static/js/main.fbb227a7.chunk.js.map",
     "runtime-main.js": "/airbnb/static/js/runtime-main.37971a6c.js",
     "runtime-main.js.map": "/airbnb/static/js/runtime-main.37971a6c.js.map",
     "static/js/2.7bfc2a0e.chunk.js": "/airbnb/static/js/2.7bfc2a0e.chunk.js",
@@ -43,6 +43,6 @@
   "entrypoints": [
     "static/js/runtime-main.37971a6c.js",
     "static/js/2.7bfc2a0e.chunk.js",
-    "static/js/main.4ade0d21.chunk.js"
+    "static/js/main.fbb227a7.chunk.js"
   ]
 }
