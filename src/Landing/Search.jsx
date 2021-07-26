@@ -33,7 +33,7 @@ export default function Search() {
         ></input>
       </div>
       <div className="landing__search--guests">
-        <div className="landing__search--header">Guests</div>3
+        <div className="landing__search--header">Guests</div>
         <input
           className="landing__search--input"
           type="text"
