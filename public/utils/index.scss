@@ -971,6 +971,10 @@ button {
     padding-top: 5px;
   }
 
+  .landing__search--calendarpopper {
+    background-color: white;
+  }
+
   .landing__headline {
     align-self: flex-start;
     position: absolute;
@@ -1557,4 +1561,21 @@ button {
     justify-content: space-around;
     width: 130px;
   }
+}
+
+.popper--wrapper {
+  border: 2px solid black;
+  width: 50vw;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.popper--buttons {
+  font-size: 1rem;
+}
+.popper--container {
+  display: flex;
 }
